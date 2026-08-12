@@ -3,8 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Futuristic Portfolio</title>
-    <!-- Tailwind CSS CDN -->
+    <title>AuraSync | Smart Business OS & Executive Command Center</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -16,218 +15,177 @@
                         cardBg: 'rgba(17, 24, 39, 0.7)',
                         neonCyan: '#06b6d4',
                         neonPurple: '#a855f7',
+                        neonGreen: '#10b981',
                     },
                     boxShadow: {
-                        glow: '0 0 20px rgba(6, 182, 212, 0.3)',
-                        glowPurple: '0 0 20px rgba(168, 85, 247, 0.3)',
+                        glow: '0 0 20px rgba(6, 182, 212, 0.2)',
+                        glowGreen: '0 0 20px rgba(16, 185, 129, 0.2)',
                     }
                 }
             }
         }
     </script>
-    <!-- Google Fonts & Lucide Icons -->
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <script src="https://unpkg.com/lucide@latest"></script>
     <style>
-        body {
-            font-family: 'Space Grotesk', sans-serif;
-            background-color: #030712;
-            color: #f3f4f6;
-            overflow-x: hidden;
-        }
-        .glass-panel {
-            background: rgba(17, 24, 39, 0.6);
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
-            border: 1px solid rgba(255, 255, 255, 0.08);
-        }
-        .glow-text {
-            text-shadow: 0 0 15px rgba(6, 182, 212, 0.5);
-        }
+        body { font-family: 'Space Grotesk', sans-serif; background-color: #030712; color: #f3f4f6; }
+        .glass-panel { background: rgba(17, 24, 39, 0.6); backdrop-filter: blur(12px); border: 1px solid rgba(255, 255, 255, 0.08); }
     </style>
 </head>
-<body class="bg-darkBg selection:bg-neonCyan selection:text-darkBg">
+<body class="bg-darkBg min-h-screen p-4 md:p-8">
 
-    <!-- Background Glow Blobs -->
-    <div class="fixed top-0 left-1/4 w-96 h-96 bg-cyan-500/10 rounded-full blur-3xl pointer-events-none"></div>
-    <div class="fixed bottom-1/4 right-1/4 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl pointer-events-none"></div>
-
-    <!-- Navigation Bar -->
-    <header class="fixed top-0 left-0 right-0 z-50 glass-panel border-b border-white/10">
-        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
-            <a href="#" class="text-xl font-bold tracking-wider text-white flex items-center gap-2">
-                <span class="text-neonCyan">&lt;</span>DEV<span class="text-neonPurple">.IO</span><span class="text-neonCyan">&gt;</span>
-            </a>
-            <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-gray-300">
-                <a href="#about" class="hover:text-neonCyan transition-colors">About</a>
-                <a href="#projects" class="hover:text-neonCyan transition-colors">Projects</a>
-                <a href="#skills" class="hover:text-neonCyan transition-colors">Skills</a>
-                <a href="#contact" class="hover:text-neonCyan transition-colors">Contact</a>
-            </nav>
-            <a href="#contact" class="hidden sm:inline-flex items-center gap-2 px-5 py-2.5 rounded-xl text-sm font-semibold text-darkBg bg-gradient-to-r from-neonCyan to-neonPurple hover:opacity-90 transition-all shadow-glow">
-                Let's Talk <i data-lucide="arrow-right" class="w-4 h-4"></i>
-            </a>
+    <!-- Header Navigation -->
+    <header class="max-w-7xl mx-auto glass-panel rounded-2xl p-6 mb-8 flex flex-col md:flex-row items-center justify-between gap-4">
+        <div class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-neonCyan to-neonPurple flex items-center justify-center shadow-glow">
+                <i data-lucide="cpu" class="w-6 h-6 text-darkBg"></i>
+            </div>
+            <div>
+                <h1 class="text-xl font-bold tracking-wider text-white">AURASYNC OS</h1>
+                <p class="text-xs text-neonCyan flex items-center gap-1">
+                    <span class="w-2 h-2 rounded-full bg-neonGreen animate-ping"></span> Live Database Telemetry Connected
+                </p>
+            </div>
+        </div>
+        <div class="flex items-center gap-3">
+            <span class="text-xs px-3 py-1.5 rounded-lg bg-neonGreen/10 text-neonGreen border border-neonGreen/20 font-medium">Happiness Index: 98.4%</span>
+            <span class="text-xs px-3 py-1.5 rounded-lg bg-neonCyan/10 text-neonCyan border border-neonCyan/20 font-medium">System State: Optimal</span>
         </div>
     </header>
 
-    <!-- Hero Section -->
-    <section class="min-h-screen flex items-center justify-center pt-28 px-6 relative">
-        <div class="max-w-4xl mx-auto text-center space-y-8">
-            <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full glass-panel border border-neonCyan/30 text-neonCyan text-xs md:text-sm animate-pulse">
-                <i data-lucide="sparkles" class="w-4 h-4"></i> Next-Gen Web Developer & UI Designer
-            </div>
-            <h1 class="text-4xl sm:text-6xl md:text-7xl font-bold tracking-tight text-white leading-tight">
-                Architecting the <span class="text-transparent bg-clip-text bg-gradient-to-r from-neonCyan via-teal-400 to-neonPurple glow-text">Digital Future</span>
-            </h1>
-            <p class="text-gray-400 text-base sm:text-lg max-w-2xl mx-auto font-light">
-                I build immersive, lightning-fast web experiences combining high-performance engineering with hyper-modern futuristic aesthetics.
-            </p>
-            <div class="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">
-                <a href="#projects" class="w-full sm:w-auto px-8 py-4 rounded-xl font-semibold text-darkBg bg-neonCyan hover:bg-cyan-400 transition-all shadow-glow flex items-center justify-center gap-2">
-                    Explore Work <i data-lucide="code-2" class="w-5 h-5"></i>
-                </a>
-                <a href="#contact" class="w-full sm:w-auto px-8 py-4 rounded-xl font-semibold text-white glass-panel hover:bg-white/10 transition-all flex items-center justify-center gap-2">
-                    Get in Touch <i data-lucide="mail" class="w-5 h-5"></i>
-                </a>
-            </div>
-        </div>
-    </section>
+    <!-- Main Command Center Grid -->
+    <main class="max-w-7xl mx-auto space-y-8">
 
-    <!-- Projects Section -->
-    <section id="projects" class="py-24 px-6 max-w-7xl mx-auto">
-        <div class="text-center space-y-4 mb-16">
-            <h2 class="text-3xl sm:text-4xl font-bold text-white">Featured <span class="text-neonCyan">Projects</span></h2>
-            <p class="text-gray-400 max-w-lg mx-auto">Selected works showcasing technical proficiency and cutting-edge design patterns.</p>
-        </div>
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <!-- Project 1 -->
-            <div class="glass-panel rounded-2xl p-6 hover:border-neonCyan/50 transition-all duration-300 group">
-                <div class="h-48 rounded-xl bg-gradient-to-br from-cyan-900/40 to-purple-900/40 mb-6 flex items-center justify-center border border-white/5 group-hover:scale-[1.02] transition-transform">
-                    <i data-lucide="cpu" class="w-16 h-16 text-neonCyan"></i>
-                </div>
-                <div class="space-y-3">
-                    <div class="flex items-center justify-between">
-                        <h3 class="text-xl font-semibold text-white">Neural Dashboard</h3>
-                        <span class="text-xs px-2.5 py-1 rounded-md bg-neonCyan/10 text-neonCyan border border-neonCyan/20">AI Saas</span>
-                    </div>
-                    <p class="text-gray-400 text-sm">Real-time data analytics dashboard with cyberpunk-inspired telemetry charts and data visualizations.</p>
-                    <div class="flex flex-wrap gap-2 pt-2">
-                        <span class="text-xs text-gray-300 bg-white/5 px-2.5 py-1 rounded-lg">React</span>
-                        <span class="text-xs text-gray-300 bg-white/5 px-2.5 py-1 rounded-lg">Tailwind</span>
-                        <span class="text-xs text-gray-300 bg-white/5 px-2.5 py-1 rounded-lg">WebSockets</span>
-                    </div>
-                </div>
-            </div>
-            <!-- Project 2 -->
-            <div class="glass-panel rounded-2xl p-6 hover:border-neonPurple/50 transition-all duration-300 group">
-                <div class="h-48 rounded-xl bg-gradient-to-br from-purple-900/40 to-pink-900/40 mb-6 flex items-center justify-center border border-white/5 group-hover:scale-[1.02] transition-transform">
-                    <i data-lucide="shield-check" class="w-16 h-16 text-neonPurple"></i>
-                </div>
-                <div class="space-y-3">
-                    <div class="flex items-center justify-between">
-                        <h3 class="text-xl font-semibold text-white">Quantum Vault</h3>
-                        <span class="text-xs px-2.5 py-1 rounded-md bg-neonPurple/10 text-neonPurple border border-neonPurple/20">Fintech</span>
-                    </div>
-                    <p class="text-gray-400 text-sm">Decentralized asset management system interface with biometric authentication design elements.</p>
-                    <div class="flex flex-wrap gap-2 pt-2">
-                        <span class="text-xs text-gray-300 bg-white/5 px-2.5 py-1 rounded-lg">Next.js</span>
-                        <span class="text-xs text-gray-300 bg-white/5 px-2.5 py-1 rounded-lg">Ethers.js</span>
-                    </div>
-                </div>
-            </div>
-            <!-- Project 3 -->
-            <div class="glass-panel rounded-2xl p-6 hover:border-neonCyan/50 transition-all duration-300 group">
-                <div class="h-48 rounded-xl bg-gradient-to-br from-blue-900/40 to-cyan-900/40 mb-6 flex items-center justify-center border border-white/5 group-hover:scale-[1.02] transition-transform">
-                    <i data-lucide="globe" class="w-16 h-16 text-cyan-400"></i>
-                </div>
-                <div class="space-y-3">
-                    <div class="flex items-center justify-between">
-                        <h3 class="text-xl font-semibold text-white">Hyperion Engine</h3>
-                        <span class="text-xs px-2.5 py-1 rounded-md bg-cyan-400/10 text-cyan-400 border border-cyan-400/20">E-Commerce</span>
-                    </div>
-                    <p class="text-gray-400 text-sm">Next-gen spatial marketplace UI optimized for high-end digital collectibles and 3D mockups.</p>
-                    <div class="flex flex-wrap gap-2 pt-2">
-                        <span class="text-xs text-gray-300 bg-white/5 px-2.5 py-1 rounded-lg">Three.js</span>
-                        <span class="text-xs text-gray-300 bg-white/5 px-2.5 py-1 rounded-lg">Tailwind</span>
-                    </div>
-                </div>
+        <!-- Top Live Metrics from Supabase -->
+        <div id="metrics-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div class="glass-panel p-6 rounded-2xl space-y-2 border-l-4 border-l-neonCyan animate-pulse">
+                <p class="text-xs text-gray-400 uppercase tracking-wider">Loading Live Telemetry...</p>
+                <h3 class="text-3xl font-bold text-white">--</h3>
             </div>
         </div>
-    </section>
 
-    <!-- Skills Section -->
-    <section id="skills" class="py-24 px-6 max-w-7xl mx-auto border-t border-white/5">
-        <div class="text-center space-y-4 mb-16">
-            <h2 class="text-3xl sm:text-4xl font-bold text-white">Core <span class="text-neonPurple">Capabilities</span></h2>
-            <p class="text-gray-400 max-w-lg mx-auto">Tools and technologies utilized to craft world-class web applications.</p>
-        </div>
-        <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6">
-            <div class="glass-panel p-6 rounded-xl text-center space-y-3 hover:border-neonCyan transition-all">
-                <i data-lucide="code" class="w-8 h-8 text-neonCyan mx-auto"></i>
-                <h4 class="font-semibold text-white">Frontend Architecture</h4>
+        <!-- Employee Transparency & Details Section -->
+        <div class="glass-panel rounded-2xl p-6 md:p-8 space-y-6">
+            <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+                <div>
+                    <h2 class="text-xl font-bold text-white">Employee Live Roster & Metrics</h2>
+                    <p class="text-xs text-gray-400">Synced directly from Supabase HR database.</p>
+                </div>
+                <div class="px-4 py-2 rounded-xl bg-white/5 border border-white/10 text-xs text-gray-300">
+                    Secure Enterprise Sync Active
+                </div>
             </div>
-            <div class="glass-panel p-6 rounded-xl text-center space-y-3 hover:border-neonPurple transition-all">
-                <i data-lucide="layers" class="w-8 h-8 text-neonPurple mx-auto"></i>
-                <h4 class="font-semibold text-white">UI/UX Systems</h4>
-            </div>
-            <div class="glass-panel p-6 rounded-xl text-center space-y-3 hover:border-neonCyan transition-all">
-                <i data-lucide="zap" class="w-8 h-8 text-neonCyan mx-auto"></i>
-                <h4 class="font-semibold text-white">Performance Optimization</h4>
-            </div>
-            <div class="glass-panel p-6 rounded-xl text-center space-y-3 hover:border-neonPurple transition-all">
-                <i data-lucide="terminal" class="w-8 h-8 text-neonPurple mx-auto"></i>
-                <h4 class="font-semibold text-white">Full-Stack Integration</h4>
-            </div>
-        </div>
-    </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="py-24 px-6 max-w-3xl mx-auto">
-        <div class="glass-panel p-8 sm:p-12 rounded-3xl border border-white/10 relative overflow-hidden">
-            <div class="absolute -right-20 -top-20 w-60 h-60 bg-neonCyan/10 rounded-full blur-3xl pointer-events-none"></div>
-            <div class="text-center space-y-4 mb-10">
-                <h2 class="text-3xl font-bold text-white">Initialize <span class="text-neonCyan">Contact</span></h2>
-                <p class="text-gray-400 text-sm">Have a project in mind or want to collaborate? Send a transmission.</p>
+            <div class="overflow-x-auto">
+                <table class="w-full text-left text-sm text-gray-300">
+                    <thead class="bg-white/5 text-xs uppercase text-gray-400 border-b border-white/10">
+                        <tr>
+                            <th class="p-4">Team Member</th>
+                            <th class="p-4">Operational Role</th>
+                            <th class="p-4">Productivity Output</th>
+                            <th class="p-4">Happiness Pulse</th>
+                            <th class="p-4">Status</th>
+                        </tr>
+                    </thead>
+                    <tbody id="employees-table-body" class="divide-y divide-white/5">
+                        <tr>
+                            <td colspan="5" class="p-4 text-center text-gray-500">Loading roster data...</td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
-            <form class="space-y-6" onsubmit="event.preventDefault(); alert('Transmission received! I will connect with you shortly.');">
-                <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                    <div class="space-y-2">
-                        <label class="text-xs font-medium text-gray-300 uppercase tracking-wider">Your Name</label>
-                        <input type="text" required class="w-full bg-darkBg border border-white/10 rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-neonCyan transition-colors" placeholder="Alex Mercer">
-                    </div>
-                    <div class="space-y-2">
-                        <label class="text-xs font-medium text-gray-300 uppercase tracking-wider">Email Address</label>
-                        <input type="email" required class="w-full bg-darkBg border border-white/10 rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-neonCyan transition-colors" placeholder="alex@future.io">
-                    </div>
-                </div>
-                <div class="space-y-2">
-                    <label class="text-xs font-medium text-gray-300 uppercase tracking-wider">Message</label>
-                    <textarea rows="4" required class="w-full bg-darkBg border border-white/10 rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-neonCyan transition-colors resize-none" placeholder="Let's build something extraordinary together..."></textarea>
-                </div>
-                <button type="submit" class="w-full py-4 rounded-xl font-bold text-darkBg bg-gradient-to-r from-neonCyan to-neonPurple hover:opacity-90 transition-all shadow-glow flex items-center justify-center gap-2 cursor-pointer">
-                    Transmit Message <i data-lucide="send" class="w-4 h-4"></i>
-                </button>
-            </form>
         </div>
-    </section>
+
+        <!-- Automated Productive Workflows Grid -->
+        <div id="workflows-grid" class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div class="glass-panel p-6 rounded-2xl space-y-4">
+                <h3 class="font-bold text-white">Loading Workflows...</h3>
+            </div>
+        </div>
+
+    </main>
 
     <!-- Footer -->
-    <footer class="py-8 border-t border-white/5 text-center text-sm text-gray-500">
-        <p>© 2026 Future Dev. Engineered with passion and precision.</p>
+    <footer class="max-w-7xl mx-auto mt-12 text-center text-xs text-gray-500 py-6 border-t border-white/5">
+        <p>© 2026 AuraSync OS. Powered by real-time automated workflows and Supabase database integration.</p>
     </footer>
 
-    <!-- Initialize Lucide Icons -->
+    <!-- Supabase JS & Dashboard Data Fetcher -->
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
     <script>
-        lucide.createIcons();
+        const SUPABASE_URL = 'https://vjrvgmillgqfjmriarow.supabase.co';
+        const SUPABASE_KEY = 'sb_publishable_YDzaY-5hGf_RN3ZQKUnaKw_yFwRySgr';
+        const supabaseClient = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
+
+        async function loadDashboardData() {
+            try {
+                // 1. Fetch Metrics
+                const { data: metrics } = await supabaseClient.from('metrics').select('*');
+                if (metrics && metrics.length > 0) {
+                    const metricsGrid = document.getElementById('metrics-grid');
+                    metricsGrid.innerHTML = '';
+                    const colors = ['border-l-neonCyan', 'border-l-neonPurple', 'border-l-neonGreen', 'border-l-cyan-400'];
+                    metrics.forEach((m, idx) => {
+                        metricsGrid.innerHTML += `
+                            <div class="glass-panel p-6 rounded-2xl space-y-2 border-l-4 ${colors[idx % colors.length]}">
+                                <p class="text-xs text-gray-400 uppercase tracking-wider">${m.indicator_name}</p>
+                                <h3 class="text-3xl font-bold text-white">${m.current_value}</h3>
+                                <p class="text-xs text-neonCyan flex items-center gap-1">${m.status}</p>
+                            </div>
+                        `;
+                    });
+                }
+
+                // 2. Fetch Employees
+                const { data: employees } = await supabaseClient.from('employees').select('*');
+                if (employees && employees.length > 0) {
+                    const empTable = document.getElementById('employees-table-body');
+                    empTable.innerHTML = '';
+                    employees.forEach(e => {
+                        const initials = e.name.split(' ').map(n => n[0]).join('');
+                        empTable.innerHTML += `
+                            <tr class="hover:bg-white/5 transition-colors">
+                                <td class="p-4 font-semibold text-white flex items-center gap-3">
+                                    <div class="w-8 h-8 rounded-full bg-cyan-500/20 text-cyan-400 flex items-center justify-center font-bold text-xs">${initials}</div>
+                                    ${e.name}
+                                </td>
+                                <td class="p-4 text-gray-400">${e.role}</td>
+                                <td class="p-4"><span class="text-neonCyan font-semibold">${e.productivity_score}</span></td>
+                                <td class="p-4"><span class="text-neonGreen">${e.happiness_index}</span></td>
+                                <td class="p-4"><span class="px-2.5 py-1 rounded-md bg-neonGreen/10 text-neonGreen text-xs">${e.status}</span></td>
+                            </tr>
+                        `;
+                    });
+                }
+
+                // 3. Fetch Workflows
+                const { data: workflows } = await supabaseClient.from('workflows').select('*');
+                if (workflows && workflows.length > 0) {
+                    const wfGrid = document.getElementById('workflows-grid');
+                    wfGrid.innerHTML = '';
+                    workflows.forEach(w => {
+                        wfGrid.innerHTML += `
+                            <div class="glass-panel p-6 rounded-2xl space-y-4">
+                                <div class="flex items-center justify-between">
+                                    <h3 class="font-bold text-white">${w.workflow_name}</h3>
+                                    <i data-lucide="zap" class="w-5 h-5 text-neonCyan"></i>
+                                </div>
+                                <p class="text-xs text-gray-450">Active automated pipeline operational step.</p>
+                                <div class="w-full bg-white/5 h-2 rounded-full overflow-hidden">
+                                    <div class="bg-neonCyan h-full w-full animate-pulse"></div>
+                                </div>
+                                <span class="text-[10px] text-neonCyan">Status: ${w.status} | Energy: ${w.energy_level}</span>
+                            </div>
+                        `;
+                    });
+                }
+            } catch (err) {
+                console.error('Error fetching Supabase data:', err);
+            }
+            lucide.createIcons();
+        }
+
+        loadDashboardData();
     </script>
-    <!-- Supabase SDK CDN -->
-<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
-<script>
-    const SUPABASE_URL = 'https://vjrvgmillgqfjmriarow.supabase.co';
-    const SUPABASE_KEY = 'sb_publishable_YDzaY-5hGf_RN3ZQKUnaKw_yFwRySgr';
-    
-    // Initialize Supabase Client
-    const supabaseClient = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
-</script>
 </body>
 </html>
