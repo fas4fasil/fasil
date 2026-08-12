@@ -220,5 +220,14 @@
     <script>
         lucide.createIcons();
     </script>
+    <!-- Supabase SDK CDN -->
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script>
+    const SUPABASE_URL = 'https://vjrvgmillgqfjmriarow.supabase.co';
+    const SUPABASE_KEY = 'sb_publishable_YDzaY-5hGf_RN3ZQKUnaKw_yFwRySgr';
+    
+    // Initialize Supabase Client
+    const supabaseClient = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
+</script>
 </body>
 </html>
